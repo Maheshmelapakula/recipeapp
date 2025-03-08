@@ -1,15 +1,18 @@
 🍽️ Recipe Finder & Saver App
-An interactive full-stack recipe application that allows users to search for recipes, view details, save favorites, and reorder them using drag-and-drop functionality.
+An interactive full-stack recipe application that allows users to:
 
+🔍 Search for recipes
+📖 View detailed recipe information
+❤️ Save favorite recipes
+🔄 Reorder saved recipes using drag-and-drop
 🚀 Features
-✅ Search Recipes – Fetch recipes using the Spoonacular API.
+✅ Search Recipes – Fetch recipes using the Spoonacular API
 ✅ Filter by Category – Choose between categories like Vegan, Desserts, Fast Food, etc.
-✅ View Recipe Details – Ingredients, instructions, and nutrition info.
-✅ Save Recipes – Store your favorite recipes.
-✅ Drag & Drop Reordering – Easily reorder saved recipes.
-✅ User Authentication – Register, Login, and access saved recipes.
-✅ Fully Responsive – Mobile-friendly and optimized for all devices.
-
+✅ View Recipe Details – See ingredients, instructions, and nutrition info
+✅ Save Recipes – Store and access your favorite recipes
+✅ Drag & Drop Reordering – Reorder saved recipes in your preferred order
+✅ User Authentication – Register, Login, and access saved recipes securely
+✅ Fully Responsive – Optimized for mobile, tablet, and desktop
 🛠️ Tech Stack
 Frontend
 ⚛ React.js – UI framework
@@ -48,13 +51,13 @@ npm start
 🚀 The app will be running at http://localhost:3000
 
 🔧 Usage
-1️⃣ Register/Login to access saved recipes.
-2️⃣ Search for recipes using the search bar.
-3️⃣ Filter recipes by category.
-4️⃣ Click on a recipe to view details.
-5️⃣ Save a recipe to your favorites.
-6️⃣ Go to "Saved Recipes" in the navbar to view & manage saved recipes.
-7️⃣ Drag & Drop recipes to reorder them.
+1️⃣ Register/Login to access saved recipes
+2️⃣ Search for recipes using the search bar
+3️⃣ Filter recipes by category
+4️⃣ Click on a recipe to view details
+5️⃣ Save a recipe to your favorites
+6️⃣ Go to "Saved Recipes" in the navbar to view & manage saved recipes
+7️⃣ Drag & Drop recipes to reorder them
 
 🚀 Deployment
 1️⃣ Build for Production
@@ -68,6 +71,4 @@ Netlify: Connect repo & deploy
 Render: Deploy backend separately
 🤝 Contributing
 Want to contribute? Fork & create a pull request! 🚀
-
-
 
