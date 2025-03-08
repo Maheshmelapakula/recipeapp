@@ -69,12 +69,5 @@ Render: Deploy backend separately
 🤝 Contributing
 Want to contribute? Fork & create a pull request! 🚀
 
-📜 License
-This project is licensed under the MIT License.
 
-📩 Contact
-For any issues, feel free to reach out!
-
-📧 Email: your-email@example.com
-🐙 GitHub: @your-username
 
