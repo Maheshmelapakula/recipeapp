@@ -11,7 +11,7 @@ function Login({ setUser }) {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post("https://recipeapp-be.vercel.app/api/auth/login", { email, password });
+      const response = await axios.post("https://recipeapp-be.vercel.app/api/auth/login", { email, password }); //api chnaged
       localStorage.setItem("token", response.data.token);
       axios.defaults.headers.common["Authorization"] = `Bearer ${response.data.token}`;
       setUser(true);
