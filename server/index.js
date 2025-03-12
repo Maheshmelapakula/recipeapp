@@ -8,7 +8,7 @@ const {connection}= require("./config/db")
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin: ["http://localhost:5173", "https://your-frontend.vercel.app"],
+    origin: ["http://localhost:5173", "https://recipeapp-ruby-two.vercel.app/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true // Allow cookies or tokens if needed
 }));
