@@ -1,5 +1,6 @@
 const axios = require("axios");
 const Recipe = require("../models/Recipe");
+const Saved = require("../models/savedRecipe");
 
 // Hardcoded API key
 const SPOONACULAR_API_KEY = "09dbaf2238ad40c4906f63eebc255c13";
@@ -28,30 +29,6 @@ exports.searchRecipe = async (req, res) => {
   }
 };
 
-// Save a recipe to the database
-exports.saveRecipe = async (req, res) => {
-  const { title, image, ingredients, instructions } = req.body;
-
-  if (!title || !image || !ingredients || !instructions) {
-    return res.status(400).json({ error: "All fields are required" });
-  }
-
-  try {
-    const recipe = new Recipe({
-      title,
-      image,
-      ingredients,
-      instructions,
-      userId: req.user.id, // Ensure `req.user.id` is available
-    });
-
-    await recipe.save();
-    res.json({ message: "Recipe saved successfully" });
-  } catch (error) {
-    console.error("Error saving recipe:", error.message);
-    res.status(500).json({ error: "Error saving recipe" });
-  }
-};
 
 // Get saved recipes for the logged-in user
 exports.getSavedRecipes = async (req, res) => {
@@ -68,3 +45,20 @@ exports.getSavedRecipes = async (req, res) => {
     res.status(500).json({ error: "Error fetching saved recipes" });
   }
 };
+
+exports.saveRecipe = async (req, res) => { 
+  try {
+    const { id } = req.body;
+    if(!id) {
+      return res.status(400).json({ error: "Recipe id is required" });
+    }
+    const recipe = await Saved.create({ id });
+    res.json(recipe);
+  } catch (error) {
+    console.log('====================================');
+    console.log(error);
+    console.log('====================================');
+  }
+  
+};
+
