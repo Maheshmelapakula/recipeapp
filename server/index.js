@@ -6,16 +6,15 @@ const {connection}= require("./config/db")
 
 
 const app = express()
-app.use(express.json())
+
 app.use(cors({
     origin: ["http://localhost:5173","https://recipeappfrontend-uacm.onrender.com/"], // Allow local & deployed frontend
     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed request methods
     credentials: true, // Allow cookies & authentication headers
 }));
+app.use(express.json())
 
 // ✅ Handle Preflight CORS Requests
-app.options("*", cors());  
-
 
 
 
