@@ -13,7 +13,7 @@ function Register() {
   const handleRegister = async () => {
     setError(null);
     try {
-      await axios.post("https://recipeapp-be.vercel.app/api/auth/register", { name, email, password });
+      await axios.post("https://foodrecipeee.onrender.com/api/auth/register", { name, email, password });
       navigate("/login");
     } catch (error) {
       console.error("Registration failed", error);
